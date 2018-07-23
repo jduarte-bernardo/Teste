@@ -685,16 +685,6 @@
         <deleteConstraint>Restrict</deleteConstraint>
         <externalId>false</externalId>
         <label>Fidelidade</label>
-        <lookupFilter>
-            <active>true</active>
-            <errorMessage>Esse cliente já possui registro de Fidelidade criado. Não é possível criar um novo registro.</errorMessage>
-            <filterItems>
-                <field>TW1_Fidelidade__c.TW1_Nome_Cliente__c</field>
-                <operation>notEqual</operation>
-                <value></value>
-            </filterItems>
-            <isOptional>false</isOptional>
-        </lookupFilter>
         <referenceTo>TW1_Fidelidade__c</referenceTo>
         <relationshipLabel>Cliente</relationshipLabel>
         <relationshipName>TW1_Relation_Fidelidade_Cliente</relationshipName>
