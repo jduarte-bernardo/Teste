@@ -18718,6 +18718,17 @@
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <validationRules>
+        <fullName>TW1_Conta_Telefone_ou_email_obrigatorios</fullName>
+        <active>false</active>
+        <description>Regra que exige que o usuário forneça pelo menos um telefone ou e-mail para as contas do tipo contato comercial e prospect.</description>
+        <errorConditionFormula>OR(
+       AND(RecordType.Id=$Label.TW1_ID_tipo_conta_comercial_PF,ISBLANK(TW1_Telefone_comercial__c),ISBLANK(TW1_Email_comercial__c),ISBLANK(TW1_Celular__c)),
+       AND(RecordType.Id=$Label.TW1_ID_tipo_conta_comercial_PJ,ISBLANK(TW1_Telefone_comercial__c),ISBLANK(TW1_Email_comercial__c),ISBLANK(TW1_Celular__c)),
+       AND(RecordType.Id=$Label.TW1_ID_tipo_conta_Prospect, ISBLANK(Phone),ISBLANK(PersonMobilePhone),ISBLANK(PersonEmail))
+)</errorConditionFormula>
+        <errorMessage>Favor informar Telefone ou Celular ou E-mail.</errorMessage>
+    </validationRules>	
+    <validationRules>
         <fullName>TW1_VR_Conta_Valida_Telefone</fullName>
         <active>false</active>
         <description>Se houver algum carácter no campos CPF ou Telefone que não seja número o salvamento será cancelado.</description>
