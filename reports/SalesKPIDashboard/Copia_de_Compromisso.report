@@ -64,11 +64,6 @@
         <language>pt_BR</language>
     </filter>
     <format>Summary</format>
-    <groupingsDown>
-        <dateGranularity>Day</dateGranularity>
-        <field>Activity.Status__c</field>
-        <sortOrder>Asc</sortOrder>
-    </groupingsDown>
     <name>Compromissos Marcados</name>
     <params>
         <name>closed</name>
