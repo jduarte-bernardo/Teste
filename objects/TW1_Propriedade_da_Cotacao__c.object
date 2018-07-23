@@ -38,12 +38,16 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>View</actionName>
-        <type>Default</type>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Propriedade_da_Cota_o_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
     </actionOverrides>
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
-    <description>Objeto de junção entre oportunidade e propriedade.</description>
+    <description>Objeto de junção entre propriedade e cotação</description>
     <enableActivities>false</enableActivities>
     <enableBulkApi>true</enableBulkApi>
     <enableChangeDataCapture>false</enableChangeDataCapture>
@@ -54,32 +58,57 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>TW1_Oportunidade__c</fullName>
+        <fullName>TW1_Area__c</fullName>
         <externalId>false</externalId>
-        <label>Oportunidade</label>
-        <referenceTo>Opportunity</referenceTo>
-        <relationshipLabel>Propriedades da Oportunidade</relationshipLabel>
-        <relationshipName>Propriedades_da_Oportunidade</relationshipName>
-        <relationshipOrder>0</relationshipOrder>
-        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <label>Área</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
-        <type>MasterDetail</type>
-        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+        <type>Number</type>
+        <unique>false</unique>
     </fields>
     <fields>
-        <fullName>TW1_Propriedade__c</fullName>
+        <fullName>TW1_Data_de_fim__c</fullName>
         <externalId>false</externalId>
-        <label>Propriedade</label>
-        <referenceTo>TW1_Propriedade__c</referenceTo>
-        <relationshipLabel>Propriedades da Oportunidade</relationshipLabel>
-        <relationshipName>Propriedades_da_Oportunidade</relationshipName>
-        <relationshipOrder>1</relationshipOrder>
-        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <label>Data de fim</label>
+        <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
-        <type>MasterDetail</type>
-        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>TW1_Data_de_inicio__c</fullName>
+        <externalId>false</externalId>
+        <label>Data de início</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>TW1_Localizacao__c</fullName>
+        <externalId>false</externalId>
+        <label>Localização</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TW1_Valor__c</fullName>
+        <externalId>false</externalId>
+        <label>Valor</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>TW1_tipo_de_propriedade__c</fullName>
@@ -92,14 +121,14 @@
         <type>Text</type>
         <unique>false</unique>
     </fields>
-    <label>Propriedade da Oportunidade</label>
+    <label>Propriedade da Cotação</label>
     <nameField>
         <displayFormat>{YYYY}{MM}-{0}</displayFormat>
         <label>Identificador</label>
         <trackHistory>false</trackHistory>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Propriedades da Oportunidade</pluralLabel>
+    <pluralLabel>Propriedades da Cotação</pluralLabel>
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>
