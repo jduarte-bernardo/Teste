@@ -16,7 +16,6 @@
         <fields>PersonEmail</fields>
         <fields>TW1_Email__c</fields>
         <fields>PersonMobilePhone</fields>
-        <fields>TW1_CEP__pc</fields>
         <fields>TW1_CPF__c</fields>
         <fields>TW1_CPF__pc</fields>
         <label>Conta Pessoal</label>
